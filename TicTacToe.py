@@ -1,6 +1,9 @@
 import time
 import random
 
+global board
+board = ['#'] * 9
+
 def TicTacToe():
     time.sleep(0.2)
     print('')
@@ -13,8 +16,6 @@ def TicTacToe():
     main()
 
 def main():
-    global board
-    board = ['#'] * 9
     
     time.sleep(0.2)
     val = input('Do You want to go "first" or "second?": ')
@@ -82,6 +83,7 @@ def PlayerChoice():
 
 
 def BoardUpdate():
+    print(board)
     lines = [board[:3], board[3:6], board[6:], [board[0], board[3], board[6]], [board[1], board[4], board[7]], [board[2], board[5], board[8]], [board[0], board[4], board[8]], [board[2], board[4], board[6]]]
     time.sleep(0.2)
     print('')
